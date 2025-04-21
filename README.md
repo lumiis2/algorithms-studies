@@ -42,8 +42,8 @@
 
 ## Algorithms II Syllabus
 - String/Pattern Matching Algorithms:
-  - Brute Force (Naive) [x]
-  - Finite Automata (DFA-based)
+  - Brute Force (Naive) - [x]
+  - Finite Automata (DFA-based) ✔️
   - Knuth-Morris-Pratt (KMP)
   - Horspool's Algorithm
   - Shift-And Algorithm
