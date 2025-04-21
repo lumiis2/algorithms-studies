@@ -15,6 +15,8 @@ int main() {
     int n = text.size();
     int m = pattern.size();
 
+    if(m == 0 || n < m) return 0;
+
     for (int i = 0; i <= n - m; i++) {
         bool match = true;
         for (int j = 0; j < m; j++) {

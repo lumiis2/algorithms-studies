@@ -28,6 +28,8 @@ int main() {
     int n = text.size();
     int m = pattern.size();
 
+    if(m == 0 || n < m) return 0;
+
     set<char> alphabet(text.begin(), text.end());
 
     map<int, map<char, int>> delta = transition(pattern, alphabet, m);

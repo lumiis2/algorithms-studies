@@ -45,7 +45,7 @@
   - Brute Force (Naive) ✔️
   - Finite Automata (DFA-based) ✔️
   - Knuth-Morris-Pratt (KMP) ✔️
-  - Horspool's Algorithm
+  - Horspool's Algorithm ✔️
   - Shift-And Algorithm
 - Trie and Suffix Tree:
   - Trie for search and pattern matching

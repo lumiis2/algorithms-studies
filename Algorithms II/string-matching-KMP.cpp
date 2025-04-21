@@ -6,7 +6,7 @@ Knuth-Morris-Pratt (KMP) String Matching Algorithm
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> prefix_function(string& pattern, int m) { 
+vector<int> prefix_function(string& pattern, int m) { // O(m)
     vector<int> p(m);
     p[0] = 0;
     int k = 0;
@@ -27,6 +27,8 @@ int main() {
     int n = text.size();
     int m = pattern.size();
 
+    if(m == 0 || n < m) return 0;
+
     vector<int> pi = prefix_function(pattern, m);
     int q  = 0;
 
@@ -38,6 +40,7 @@ int main() {
             q = pi[q-1];
         }
     }
+    // O(m+n)
 
     return 0;
 }
