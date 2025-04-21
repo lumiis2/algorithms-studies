@@ -42,9 +42,9 @@
 
 ## Algorithms II Syllabus
 - String/Pattern Matching Algorithms:
-  - Brute Force (Naive) - [x]
+  - Brute Force (Naive) ✔️
   - Finite Automata (DFA-based) ✔️
-  - Knuth-Morris-Pratt (KMP)
+  - Knuth-Morris-Pratt (KMP) ✔️
   - Horspool's Algorithm
   - Shift-And Algorithm
 - Trie and Suffix Tree:
@@ -81,3 +81,6 @@
 - Steiner Tree Problem
 - Feedback Vertex Set
 - Scheduling Problems (e.g., Job Shop Scheduling)
+
+
+## Competitive Programming Classic Problems

@@ -1,2 +1,2 @@
 Aqui está um template enxuto e eficiente para programação competitiva em C++, com as bibliotecas mais usadas, macros úteis e uma estrutura básica de main.
-Aqui
+está
