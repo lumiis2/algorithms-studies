@@ -2,7 +2,6 @@
 
 Here I’m studying the most common and classic NP-complete problems and their variations. These problems frequently appear in programming and algorithm courses, so it is important to understand their concepts deeply. Mastering these problems helps to generalize solutions and strategies when working on other types of optimization or decision problems.
 The idea is to both model the problems using Julia and solve them using C++. The Julia models use the Gurobi solver, ensuring that a correct formulation yields an optimal solution. This allows me to validate my C++ implementation by comparing it against the result from the solver.
----
 
 ### 0/1 Knapsack Problem
 
