@@ -84,3 +84,6 @@
 
 
 ## Competitive Programming Classic Problems
+
+1. **beecrowd** 2973 - Maratona Brasileira de Comedores de Pipoca ✔️
+  - Binary Search in the answer
