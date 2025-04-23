@@ -1,3 +1,6 @@
+using JuMP
+using Gurobi
+
 function knapsack(weights, values, capacity)
     n = length(weights)
     model = Model(Gurobi.Optimizer)
@@ -14,3 +17,8 @@ weights = [2, 3, 4, 5]
 values = [3, 4, 5, 6]
 capacity = 5
 println("Knapsack 0/1: ", knapsack(weights, values, capacity))
+
+solution = knapsack(weights, values, capacity)
+println("Knapsack 0/1 solution: ", solution)
+
+
