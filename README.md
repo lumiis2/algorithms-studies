@@ -67,15 +67,15 @@
 
 - SAT (Boolean Satisfiability Problem)
   - 3-SAT, k-SAT
-- Vertex Cover
-- Independent Set
-- Clique Problem
-- Graph Coloring
+- Vertex Cover ✔️
+- Independent Set ✔️
+- Clique Problem ✔️
+- Graph Coloring ✔️
 - Hamiltonian Cycle
 - Traveling Salesman Problem (TSP)
 - Subset Sum
 - Partition Problem
-- Knapsack Problem (0/1 Knapsack)
+- Knapsack Problem (0/1 Knapsack) ✔️
 - Set Cover Problem
 - Exact Cover Problem (e.g., with Dancing Links)
 - Steiner Tree Problem
