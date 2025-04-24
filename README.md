@@ -62,6 +62,11 @@
     - Incremental Algorithm
     - Divide and Conquer Algorithm
   - Art Gallery Problem
+    - Ear Clipping Algorithm
+  - Voronoy's Diagram
+    - Incremental
+  - Range Search
+    - Kd-Trees
 
 ## Classical NP-complete Problems (Modeling)
 
@@ -86,3 +91,6 @@
 ## Competitive Programming Classic Problems
 
 1. **beecrowd 2973** - Maratona Brasileira de Comedores de Pipoca ✔️ (Binary Search in the answer)
+2. **beecrowd 2463** - Corredor ✔️
+3. **beecrowd 1021** - Notas e Moedas ✔️
+4. **codeforces** - E.CycleComponents ✔️ (rever)
