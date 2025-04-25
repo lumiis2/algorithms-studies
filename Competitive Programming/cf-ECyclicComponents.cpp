@@ -12,46 +12,46 @@ se cada vertice tem grau pelo menos 2
 
 using namespace std;
 
-const int MAX = 1e5 + 10;
+const int MAX = 200 * 1000 + 11;
+
+int n, m;
 vector<int> adj[MAX];
+vector<int> comp;
 bool visited[MAX];
+int deg[MAX]; // grau de cada vertice
 
-bool is_cycle(int u){
-    queue<int> q;
-    q.push(u);
-    visited[u] = true;
-    bool iscycle = true;
 
-    while(!q.empty()){
-        int node = q.front(); q.pop();
+void dfs(int v){
+    visited[v] = true;
+    comp.pb(v);
 
-        if(adj[node].size() != 2) iscycle = false;
-
-        for(int v : adj[node]){
-            if(!visited[v]){
-                visited[v]= true;
-                q.push(v);
-            }
-        }
+    for(auto e : adj[v]){
+        if(!visited[e]) dfs(e);
     }
-    return iscycle;
 }
 
 int main() { _
-    int n, m;
+
     cin >> n >> m;
 
     for(int i = 0; i<m; i++){
         int u, v;
         cin >> u >> v;
+        u--, v--;
         adj[u].pb(v);
         adj[v].pb(u);
+        deg[v]++;
+        deg[u]++;
     }
 
     int cnt = 0;
-    for(int i = 1; i <= n; i++){
+    for(int i = 0; i < n; i++){
         if(!visited[i]){
-            if(is_cycle(i)) cnt++;
+            comp.clear();
+            dfs(i);
+            bool cycle = true;
+            for(auto v : comp) cycle &= deg[v] == 2;
+            if(cycle) cnt++;
         }
     }
 
