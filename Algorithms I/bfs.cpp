@@ -20,7 +20,7 @@ void bfs(int start) {
 
     while (!q.empty()) {
         int u = q.front(); q.pop();
-        cout << u << ' ';
+        cout << u+1 << ' ';
 
         for (int v : adj[u]) {
             if (!visited[v]) {
