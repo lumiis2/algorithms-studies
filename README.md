@@ -21,11 +21,11 @@
   - Counting Sort
   - Radix Sort
 - Dijkstra's Algorithm
-- Tree Traversals:
-  - Preorder
-  - Inorder
-  - Postorder
-- BFS and DFS
+- Tree Traversals: ✔️
+  - Preorder ✔️
+  - Inorder ✔️
+  - Postorder ✔️
+- BFS and DFS ✔️
 - Binary Search
 - Disjoint Set Union (DSU)
 - Kruskal's Algorithm
