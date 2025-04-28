@@ -10,7 +10,7 @@ int main() {
     int n, m;
     cin >> n >> m;
     
-    vector<int> freq(m+2, 0); // +2 pra evitar problemas de índice
+    vector<int> freq(m+2, 0); 
     
     for (int i = 0; i < n; i++) {
         int x;
@@ -20,7 +20,6 @@ int main() {
     
     vector<int> b(m+2, 0);
     
-    // Processar de trás pra frente
     for (int k = m; k >= 1; k--) {
         b[k] = freq[k] + b[k+1];
     }
