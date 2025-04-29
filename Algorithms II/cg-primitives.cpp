@@ -83,3 +83,14 @@ bool pointInPolygon(const Point& p, const vector<Point>& polygon) {
     }
     return cnt % 2 == 1;
 }
+
+int main() {
+    Point a = {0, 0};
+    Point b = {4, 0};
+    Point c = {0, 3};
+
+    double area = triangleArea(a, b, c);
+    cout << "Area of triangle: " << area << endl;
+
+    return 0;
+}
