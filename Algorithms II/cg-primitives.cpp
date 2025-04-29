@@ -7,12 +7,12 @@ struct Point {
     double x, y;
 };
 
-// Cross product of two vectors: (p1 - p0) × (p2 - p0)
+// Cross product of two vectors: (p1 - p0) × (p2 - p0) => O(1)
 double cross(const Point& p0, const Point& p1, const Point& p2) {
     return (p1.x - p0.x)*(p2.y - p0.y) - (p1.y - p0.y)*(p2.x - p0.x);
 }
 
-// Orientation of triplet (p, q, r)
+// Orientation of triplet (p, q, r) => O(1)
 // Returns: 0 -> colinear, 1 -> clockwise, 2 -> counter-clockwise
 int orientation(const Point& p, const Point& q, const Point& r) {
     double val = cross(p, q, r);
@@ -20,13 +20,13 @@ int orientation(const Point& p, const Point& q, const Point& r) {
     return (val > 0 ? 2 : 1); // 2 = CCW, 1 = CW
 }
 
-// Check if point q lies on segment pr
+// Check if point q lies on segment pr => O(1)
 bool onSegment(const Point& p, const Point& q, const Point& r) {
     return min(p.x, r.x) <= q.x && q.x <= max(p.x, r.x) &&
            min(p.y, r.y) <= q.y && q.y <= max(p.y, r.y);
 }
 
-// Check if two segments p1q1 and p2q2 intersect
+// Check if two segments p1q1 and p2q2 intersect => O(1)
 bool segmentsIntersect(const Point& p1, const Point& q1, const Point& p2, const Point& q2) {
     int o1 = orientation(p1, q1, p2);
     int o2 = orientation(p1, q1, q2);
@@ -45,7 +45,7 @@ bool segmentsIntersect(const Point& p1, const Point& q1, const Point& p2, const 
     return false;
 }
 
-// Check for any intersection among a set of segments
+// Check for any intersection among a set of segments => O(n^2)
 bool hasAnyIntersection(const vector<pair<Point, Point>>& segments) {
     int n = segments.size();
     for (int i = 0; i < n; ++i)
@@ -56,12 +56,12 @@ bool hasAnyIntersection(const vector<pair<Point, Point>>& segments) {
     return false;
 }
 
-// Area of triangle formed by p1, p2, p3
+// Area of triangle formed by p1, p2, p3 => O(1)
 double triangleArea(const Point& p1, const Point& p2, const Point& p3) {
     return abs(cross(p1, p2, p3)) / 2.0;
 }
 
-// Check if point p is inside triangle ABC
+// Check if point p is inside triangle ABC => O(1)
 bool pointInTriangle(const Point& p, const Point& a, const Point& b, const Point& c) {
     double A = triangleArea(a, b, c);
     double A1 = triangleArea(p, b, c);
@@ -70,7 +70,7 @@ bool pointInTriangle(const Point& p, const Point& a, const Point& b, const Point
     return abs(A - (A1 + A2 + A3)) < 1e-9;
 }
 
-// Ray casting algorithm to check if point is inside a polygon
+// Ray casting algorithm to check if point is inside a polygon => O(n)
 bool pointInPolygon(const Point& p, const vector<Point>& polygon) {
     int cnt = 0, n = polygon.size();
     for (int i = 0; i < n; ++i) {
