@@ -51,11 +51,11 @@
   - Trie for search and pattern matching
   - Suffix Tree for substring problems
 - Computational Geometry Algorithms:
-  - Classical/Primitive Operations:
-    - Relative position of segments / routing by segments
-    - Segment intersection
-    - Intersection among a set of segments
-    - Point-in-polygon test
+  - Classical/Primitive Operations: ✔️
+    - Relative position of segments / routing by segments ✔️
+    - Segment intersection ✔️
+    - Intersection among a set of segments ✔️
+    - Point-in-polygon test ✔️
   - Convex Hull:
     - Graham's Scan
     - Gift Wrapping (Jarvis March)
