@@ -47,10 +47,9 @@ int main() {
         if(pattern[q] == text[i])
             q++;
         if (q == m) {
-            // Encontrei uma ocorrência
             cout << "Pattern occurs with shift " << i - m + 1 << endl;
             found = true;
-            q = pi[q-1];  // Continue a busca por mais ocorrências
+            q = pi[q-1];  
         }
     }
 
