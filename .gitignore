@@ -14,10 +14,7 @@ __pycache__/
 *.log
 *.tmp
 
-# Outras pastas comuns
+# Outras pastas
 .vscode/
 .idea/
 
-# Arquivos do sistema operacional
-.DS_Store
-Thumbs.db

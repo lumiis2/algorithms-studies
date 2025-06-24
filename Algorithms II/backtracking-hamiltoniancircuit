@@ -1,0 +1,64 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int n;  // Número de vértices
+vector<vector<int>> adj;  // Matriz de adjacência (1 se tem aresta, 0 se não)
+vector<int> path;         // Caminho atual
+vector<bool> visited;     // Marca vértices visitados
+
+// Função de backtracking
+bool solve(int pos) {
+    if (pos == n) {
+        // Verifica se há aresta do último para o primeiro (ciclo)
+        if (adj[path[pos - 1]][path[0]] == 1) {
+            cout << "Hamiltonian Circuit: ";
+            for (int v : path) {
+                cout << v << " ";
+            }
+            cout << path[0] << " (retorna)" << endl;
+            return true;
+        }
+        return false;
+    }
+
+    for (int v = 0; v < n; v++) {
+        if (adj[path[pos - 1]][v] == 1 && !visited[v]) {
+            path[pos] = v;
+            visited[v] = true;
+
+            if (solve(pos + 1)) return true;
+
+            // Backtrack
+            path[pos] = -1;
+            visited[v] = false;
+        }
+    }
+
+    return false;
+}
+
+int main() {
+    // Exemplo: grafo com 5 vértices
+    n = 5;
+    adj = {
+        {0,1,1,0,1},
+        {1,0,1,1,0},
+        {1,1,0,1,1},
+        {0,1,1,0,1},
+        {1,0,1,1,0}
+    };
+
+    path.assign(n, -1);
+    visited.assign(n, false);
+
+    // Começa pelo vértice 0
+    path[0] = 0;
+    visited[0] = true;
+
+    if (!solve(1)) {
+        cout << "No Hamiltonian Circuit found." << endl;
+    }
+
+    return 0;
+}
