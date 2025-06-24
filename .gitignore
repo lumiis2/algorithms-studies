@@ -1,0 +1,23 @@
+# Arquivos binários (executáveis C++)
+*.exe
+
+# Arquivos de entrada ou dados
+*.in
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Cache e arquivos temporários do sistema
+*.log
+*.tmp
+
+# Outras pastas comuns
+.vscode/
+.idea/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
